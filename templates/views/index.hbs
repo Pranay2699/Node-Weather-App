@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    {{!-- <script src="./js/app.js"></script> --}}
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-content">
+        {{>header}}
+        <h6>{{ name }}</h6>
+        <img src="./images/maserati.webp" alt="" class="portrait">
+        
+        <form action="">
+            <input type="text" name="" id="" placeholder="Location">
+            <button>Search</button>
+        </form>
+        <p class="cl1">
+
+        </p> 
+    </div>
+    
+
+    {{>footer}}
+    <!-- Here we are putting javascripts at the bottom of the body tag because to access the elements of
+    body it should run after everything in body runs -->
+    <script src="./js/app.js"></script>
+</body>
+</html>
