@@ -29,7 +29,7 @@ weatherForm.addEventListener('submit',(e)=>{
                 console.log("An error occured for given address while fetching")
             }
             else{
-                document.querySelector('.cl1').textContent = data["address"]+" has temperature of "+data["forecast"]+" degreeC"
+                document.querySelector('.cl1').textContent = data["address"]+" has temperature of "+data["forecast"]+" degreeC. "+"With humidity of " + data["humidity"]
                 console.log(data)
             }
         })

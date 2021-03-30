@@ -120,16 +120,17 @@ app.get('/weather',(req,res)=>{
         }
         
         data=resp1
-        forecast.forecast(data,(err,resp2)=>{
+        forecast.forecast(data,(err,resp2,humi)=>{
             if (err){
                 return res.send({
                     error:"Error from forecast part"
                 })
             }
-        
+            console.log(humi)
             return res.send({
                 address:add,
-                forecast:resp2
+                forecast:resp2,
+                humidity:humi
             })
         })
         

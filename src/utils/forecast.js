@@ -11,7 +11,7 @@ const forecast=(data,callback)=>{
             if(error){
                 callback("Can't connect to weather API",undefined)
             } else{
-                callback(undefined,body.current.temperature)    
+                callback(undefined,body.current.temperature,body.current.weather_descriptions.humidity)    
             }
         })
 
