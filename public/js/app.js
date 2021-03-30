@@ -22,7 +22,7 @@ weatherForm.addEventListener('submit',(e)=>{
     const address=searchElement.value
     document.querySelector('.cl1').textContent = "Loading...."
     //Using fetch for weather app
-    fetch(`http://127.0.0.1:3000/weather?address=${address}`).then((response)=>{
+    fetch(`/weather?address=${address}`).then((response)=>{
         response.json().then((data)=>{
             if (data.error){
                 document.querySelector('.cl1').textContent = "An error occured for given address while fetching" 

@@ -25,6 +25,7 @@ const e = require('express')
 // Creating an express appliation
 // As of now doesn't take any arguments
 const app = express()
+const port = process.env.PORT || 3000
 
 //Path for different folders
 const static_path = path.join(__dirname,'../public')
@@ -186,6 +187,6 @@ app.get('*',(req,res)=>{
 //To start the Sever.
 //It listens on specific port
 // Server is up via asynchronous process
-app.listen(3000, ()=>{
-    console.log(`Server is up on port 3000`)
+app.listen(port, ()=>{
+    console.log(`Server is up on port ${port}`)
 })
